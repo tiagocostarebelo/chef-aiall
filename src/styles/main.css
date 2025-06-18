@@ -3,11 +3,11 @@
 }
 
 body {
+    max-width: 860px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-family: Inter, sans-serif;
     background-color: #e7e7e6;
-
     padding: 0.5rem;
 }
 
@@ -18,10 +18,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    height: 80px;
+    height: 10vdvh;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 header>img {
@@ -45,6 +45,10 @@ header>h1 {
 /* INGREDIENT FORM STYLES */
 main {
     padding: 2rem 1rem;
+    margin-top: 0.75rem;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 0px 0px 10px 10px;
 }
 
 .add-ingredient__form {
@@ -80,6 +84,7 @@ main {
 
 .add-ingredient__form>button:hover {
     font-weight: 600;
+
 }
 
 @media screen and (max-width: 425px) {
