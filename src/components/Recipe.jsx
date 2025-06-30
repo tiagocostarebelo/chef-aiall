@@ -1,7 +1,10 @@
+import ReactMarkdown from 'react-markdown'
+
 export default function Recipe(props) {
     return (
-        <section>
-            {props.recipe}
+        <section className="suggested-recipe-container" aria-live="polite">
+            <h2>Chef AiAll Recommends:</h2>
+            <ReactMarkdown>{props.recipe}</ReactMarkdown>
         </section>
     )
 }
