@@ -52,10 +52,6 @@ VITE_HF_ACCESS_TOKEN=your_huggingface_api_key_here
 npm run dev
 ```
 
-## Screenshots
-
-Coming soon – deployment in progress.
-
 ## Example Use
 
 - Type in your ingredients one by one
