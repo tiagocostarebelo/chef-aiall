@@ -14,9 +14,7 @@ export default function Main() {
     }
 
     async function getRecipe() {
-        console.log(ingredients)
         const responseMarkdown = await getRecipeFromMistral(ingredients);
-        console.log(responseMarkdown.message);
         setRecipe(responseMarkdown.message);
     }
 
@@ -33,7 +31,7 @@ export default function Main() {
                 <button className="add-ingredient__button" >Add ingredient</button>
             </form>
             {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
-            {getRecipe && <Recipe recipe={recipe} />}
+            {recipe && <Recipe recipe={recipe} />}
         </main>
     )
 }
