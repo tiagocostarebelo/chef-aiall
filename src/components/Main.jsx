@@ -4,9 +4,15 @@ import Recipe from './Recipe';
 import getRecipeFromMistral from '../../ai';
 
 export default function Main() {
-    const [ingredients, setIngredients] = React.useState([]);
-    const [recipe, setRecipe] = React.useState("");
+    const [ingredients, setIngredients] = React.useState([])
+    const [recipe, setRecipe] = React.useState("")
+    const recipeSection = React.useRef(null)
 
+    React.useEffect(() => {
+        if (recipe !== "" && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView();
+        }
+    }, [recipe])
 
     function addIngredients(formData) {
         const newIngredient = formData.get("ingredient");
@@ -30,7 +36,7 @@ export default function Main() {
                 />
                 <button className="add-ingredient__button" >Add ingredient</button>
             </form>
-            {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
+            {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} ref={recipeSection} />}
             {recipe && <Recipe recipe={recipe} />}
         </main>
     )
